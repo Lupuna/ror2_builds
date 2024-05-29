@@ -1,3 +1,7 @@
 from django.contrib import admin
+from items.models import Addon, Item
 
-# Register your models here.
+
+admin.site.register(Addon)
+admin.site.register(Item)
+

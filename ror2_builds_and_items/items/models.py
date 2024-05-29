@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse_lazy
 
 
 class Addon(models.Model):
@@ -8,6 +9,9 @@ class Addon(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse_lazy('addon-detail', args=[self.id])
 
 
 class Item(models.Model):
@@ -26,3 +30,6 @@ class Item(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse_lazy('item-detail', args=[self.id])
