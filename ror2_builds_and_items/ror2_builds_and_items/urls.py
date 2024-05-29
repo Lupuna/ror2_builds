@@ -21,7 +21,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('v1/', include('items.urls'))
+    path('v1/', include('items.urls')),
+    path('v1/api/builds', include('builds.urls')),
+    path("__debug__/", include("debug_toolbar.urls")),
 ]
 
 

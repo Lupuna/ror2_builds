@@ -1,3 +1,4 @@
 .idea
 db.sqlite3
 db.sqlite3-journal
+ror2_builds_and_items/media/images/*
